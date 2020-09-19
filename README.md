@@ -8,4 +8,6 @@ Pizza Order Spring Application.
 ## Technologies
 Project was created with:
 * Java
-* Spring - SpringBoot
+* Spring
+* Maven
+* Thymeleaf
