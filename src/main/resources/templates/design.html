@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikacja Pizza Cloud</title>
+</head>
+<body>
+<h1>Witaj w...</h1>
+<img th:src="@{/images/PizzaCloud.png}"/>
+<h1>Przygotuj własną pizzę!</h1>
+
+<form method = "POST" th:object="${design}">
+    <div class="grid">
+        <div class="ingredient-group" id="doughs">
+            <h3>Wybierz rodzaj ciasta:</h3>
+            <div th:each="ingredient : ${dough}">
+                <input name="ingredients" type="radio" th:value="${ingredient.id}" />
+                <span th:text="${ingredient.name}">SKLADNIK</span><br/>
+            </div>
+        </div>
+
+        <div class="ingredient-group" id="cheeses">
+            <h3>Wybierz rodzaj sera:</h3>
+            <div th:each="ingredient : ${cheese}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
+                <span th:text="${ingredient.name}">SKLADNIK</span><br/>
+            </div>
+        </div>
+
+        <div class="ingredient-group" id="meats">
+            <h3>Wybierz rodzaj mięsa:</h3>
+            <div th:each="ingredient : ${meat}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
+                <span th:text="${ingredient.name}">SKLADNIK</span><br/>
+            </div>
+        </div>
+
+        <div class="ingredient-group" id="sauces">
+            <h3>Wybierz rodzaj sosu:</h3>
+            <div th:each="ingredient : ${sauce}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
+                <span th:text="${ingredient.name}">SKLADNIK</span><br/>
+            </div>
+        </div>
+
+        <div class="ingredient-group" id="veggies">
+            <h3>Wybierz rodzaj warzyw:</h3>
+            <div th:each="ingredient : ${veggies}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
+                <span th:text="${ingredient.name}">SKLADNIK</span><br/>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h3>Nadaj nazwę przygotowanej pizzy:</h3>
+        <input type="text" th:field="*{name}"/>
+        <br/>
+        <button>Wyślij swoje zamówienie</button>
+    </div>
+</form>
+</body>
+</html>
