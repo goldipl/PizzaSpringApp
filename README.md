@@ -9,5 +9,6 @@ Pizza Order Spring Application.
 Project was created with:
 * Java
 * Spring
+* HTML
 * Maven
 * Thymeleaf
