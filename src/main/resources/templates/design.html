@@ -11,7 +11,7 @@
 <h1>Witaj w...</h1>
 <img th:src="@{/images/PizzaCloud.png}"/>
 <h1>Przygotuj własną pizzę!</h1>
-
+<br><br>
 <form method = "POST" th:object="${design}">
     <div class="grid">
         <div class="ingredient-group" id="doughs">
@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-
+    <br><br>
     <div>
         <h4>Nadaj nazwę przygotowanej pizzy:</h4>
         <input type="text" th:field="*{name}"/>
