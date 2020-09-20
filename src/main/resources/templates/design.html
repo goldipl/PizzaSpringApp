@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Aplikacja Pizza Cloud</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
 <h1>Witaj w...</h1>
@@ -13,7 +15,7 @@
 <form method = "POST" th:object="${design}">
     <div class="grid">
         <div class="ingredient-group" id="doughs">
-            <h3>Wybierz rodzaj ciasta:</h3>
+            <h4>Wybierz rodzaj ciasta:</h4>
             <div th:each="ingredient : ${dough}">
                 <input name="ingredients" type="radio" th:value="${ingredient.id}" />
                 <span th:text="${ingredient.name}">SKLADNIK</span><br/>
@@ -21,7 +23,7 @@
         </div>
 
         <div class="ingredient-group" id="cheeses">
-            <h3>Wybierz rodzaj sera:</h3>
+            <h4>Wybierz rodzaj sera:</h4>
             <div th:each="ingredient : ${cheese}">
                 <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
                 <span th:text="${ingredient.name}">SKLADNIK</span><br/>
@@ -29,7 +31,7 @@
         </div>
 
         <div class="ingredient-group" id="meats">
-            <h3>Wybierz rodzaj mięsa:</h3>
+            <h4>Wybierz rodzaj mięsa:</h4>
             <div th:each="ingredient : ${meat}">
                 <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
                 <span th:text="${ingredient.name}">SKLADNIK</span><br/>
@@ -37,7 +39,7 @@
         </div>
 
         <div class="ingredient-group" id="sauces">
-            <h3>Wybierz rodzaj sosu:</h3>
+            <h4>Wybierz rodzaj sosu:</h4>
             <div th:each="ingredient : ${sauce}">
                 <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
                 <span th:text="${ingredient.name}">SKLADNIK</span><br/>
@@ -45,7 +47,7 @@
         </div>
 
         <div class="ingredient-group" id="veggies">
-            <h3>Wybierz rodzaj warzyw:</h3>
+            <h4>Wybierz rodzaj warzyw:</h4>
             <div th:each="ingredient : ${veggies}">
                 <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
                 <span th:text="${ingredient.name}">SKLADNIK</span><br/>
@@ -54,10 +56,10 @@
     </div>
 
     <div>
-        <h3>Nadaj nazwę przygotowanej pizzy:</h3>
+        <h4>Nadaj nazwę przygotowanej pizzy:</h4>
         <input type="text" th:field="*{name}"/>
         <br/>
-        <button>Wyślij swoje zamówienie</button>
+        <button type="button" class="btn btn-outline-primary">Wyślij swoje zamówienie</button>
     </div>
 </form>
 </body>
