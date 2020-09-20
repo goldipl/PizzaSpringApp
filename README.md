@@ -12,3 +12,4 @@ Project was created with:
 * HTML
 * Maven
 * Thymeleaf
+* Bootstrap
