@@ -10,6 +10,7 @@ Project was created with:
 * Java
 * Spring
 * HTML
+* CSS
 * Maven
 * Thymeleaf
 * Bootstrap
