@@ -3,7 +3,7 @@
 * [Technologies](#technologies)
 
 ## General info
-Pizza Order Spring Application.
+Pizza Ordering Spring Application.
 
 ## Technologies
 Project was created with:
@@ -14,3 +14,4 @@ Project was created with:
 * Maven
 * Thymeleaf
 * Bootstrap
+* Tomcat server
